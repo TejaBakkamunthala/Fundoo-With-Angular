@@ -1,0 +1,30 @@
+<p>trash works!</p>
+
+<div class="container">
+
+    <div *ngFor="let notes of trashList" class="card">
+<mat-card class="notesConatiner">
+     <mat-card-title mat-input class="title"> 
+        {{notes.title}}
+     </mat-card-title>  
+     
+     <mat-card-content>
+        <div class="font">{{notes.description}}</div>
+        <div>{{notes.notesId}}</div>
+     </mat-card-content>
+
+     <div>
+        <button mat-icon-button  matTooltip="delete_forever">
+            <img src="/assets/delete_forever.png" alt="" >
+            </button>
+            <button mat-icon-button  matTooltip="restorefrom trash" (click)="restore(notes)" >
+                <img src="/assets/restorefromtrash.png" alt="" >
+               </button>
+       
+
+     </div>
+     
+</mat-card>
+
+</div>
+</div>

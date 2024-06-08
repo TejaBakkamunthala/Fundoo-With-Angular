@@ -1,0 +1,50 @@
+<div class="app-icons">
+    <button mat-icon-button  matTooltip="add_alert">
+        
+        <img src="/assets/add_alert.png" alt="" >
+    
+        </button>
+    
+        <button mat-icon-button  matTooltip="add_person">  
+        <img src="/assets/add_person.png" alt="" >
+        </button>
+
+        <button mat-icon-button  matTooltip="paint" [matMenuTriggerFor]="paletteMenu">
+        <img src="/assets/paint.png" alt="" >
+        </button>
+
+        <button mat-icon-button  matTooltip="add-image">
+        <img src="/assets/add-image.png" alt="" >
+        </button>
+
+        <button mat-icon-button  matTooltip="archive" (click)="OnArchive()" >
+         <img src="/assets/archive.png" alt="" >
+        </button>
+
+        <button mat-icon-button  matTooltip="moredots" [matMenuTriggerFor]="moreMenu">
+         <img src="/assets/moredots.png" alt="" >
+        </button>
+    
+
+        <mat-menu #moreMenu="matMenu" xPosition="before">
+            <button mat-menu-item  (click)="OnDelete()">Delete Notes</button>
+            <button mat-menu-item >Add label</button>
+            <button mat-menu-item >Add a drawing</button>
+            <button mat-menu-item >Make a copy</button>
+            <button mat-menu-item >Show checkboxes</button>
+        </mat-menu> 
+    
+
+        <mat-menu #paletteMenu="matMenu" xPosition="before" id="colorpalette" class="test2">
+            <div *ngFor='let colors of colorArray'>
+                <button class="colorIcon" [style.background]="colors.code" (click)="SelectColor(colors)" >
+                    <!-- <span class="colorName">{{ colors.name }}</span> -->
+                </button>
+        
+            </div>
+        
+        </mat-menu>
+    
+    
+</div>
+

@@ -1,0 +1,80 @@
+<mat-toolbar >
+
+<mat-toolbar-row >
+    <button mat-icon-button style="margin-left:-5px" (click)="sidenav.toggle(); ">
+        <mat-icon>menu</mat-icon>
+      </button>
+        <img id="img1" src= "/assets/keep.png" />      
+     <span class="keep">Keep </span>
+
+
+<div class="header-search-container">
+    <button mat-icon-button  matTooltip="search" class="header-search">
+        <img src="/assets/search.png" alt="">
+    </button>
+    
+    <input matInput placeholder="Search"  type="text"  class="search-bar" (keyup)="search($event)" >
+
+    <button mat-icon-button  matTooltip="ClearSearch">
+        
+    <img src="/assets/ClearSearch.png" alt="" class="clear-search">
+
+    </button>
+   
+</div>
+
+
+<div class="end">
+    <button mat-icon-button  matTooltip="refresh" >
+        <img src="/assets/refresh.png" alt="">
+    </button>
+
+    <button mat-icon-button  matTooltip="ListView">
+        <img src="/assets/ListView.png" alt="">
+    </button>
+
+
+    <button mat-icon-button  matTooltip="Settings" style="margin-right:25px;"> 
+        <img src="/assets/settings.png" alt="">
+    </button>
+
+
+    <button mat-icon-button  matTooltip="apps" >
+        <img src="/assets/apps.png" alt="">
+    </button>
+
+    <button mat-icon-button  matTooltip="account" >
+        <img src="/assets/account.png" alt="">
+    </button>
+ 
+       </div>
+    
+   
+    
+   
+
+
+
+</mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+<mat-sidenav opened mode="side" #sidenav >
+    <mat-nav-list>
+       <a mat-list-item ><img class="side-image" src="/assets/notes.png"><mat-label class="label" >Notes</mat-label></a>
+        <a mat-list-item><img class="side-image" src="/assets/remainders.png"><mat-label class="label">Reminders</mat-label></a>
+        <a mat-list-item> <img class="side-image" src="/assets/edit.png"><mat-label class="label">Edit Labels</mat-label></a>
+        <a mat-list-item> <img class="side-image" src="/assets/archive.png"><mat-label class="label">Archive</mat-label></a>
+        <a mat-list-item> <img class="side-image" src="/assets/bin.png"><mat-label class="label">Trash</mat-label></a>
+    </mat-nav-list>
+</mat-sidenav>
+<mat-sidenav-content>
+    <div style="height : 88vh;">
+   <router-outlet>
+   </router-outlet>
+    </div>
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+

@@ -1,0 +1,94 @@
+
+<form [formGroup]="loginDataForm" (ngSubmit)="OnLogin()">
+  <div class="container">
+  
+    <div class="sign" style="margin-top: -10px; margin-left: -40px;">
+     <img src="assets\social.png" alt="Google Icon" style="margin-left: -10px;">
+     <div style="margin-top:-40px">
+      <h1>Sign in</h1>
+      <p>Use your Google Account</p>
+     </div>
+      </div>
+     
+
+     <div class="box" style="margin-right: -50px ; margin-top:80px">
+    <div id="em" class="same" >
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-error *ngIf="loginDataForm.get('email')?.hasError('email')"> Email is not valid.
+      </mat-error>
+        <mat-error *ngIf="loginDataForm.get('email')?.hasError('required')"> Email is required.
+      </mat-error>
+      </mat-form-field>
+      </div>
+    
+    
+    <div id="em" class="same">
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" formControlName="password">
+        <mat-error *ngIf="loginDataForm.get('password')?.hasError('required')"> Password is required.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  
+
+<div  style="margin-left:5px; width:120px; margin-top:10px">
+  <div> <button mat-flat-button style="color:blue">Forgot your password?</button></div>
+  </div>
+ 
+
+  <div  style="width:120px; margin-top:44px; margin-left:180px">
+   <div>   <button mat-flat-button style="color: blue;">Create Account</button> </div>
+
+  </div>
+
+  <div style="width:80px; margin-top:-40px; margin-left:400px">
+   <div> <button mat-flat-button color="primary">Login</button></div> 
+  </div> 
+
+  </div>
+
+</div> 
+  
+</form>
+ 
+<!-- <footer class="footer">
+  <select class="option" name="language">
+      <option value="en-US">English (United States)</option>
+  </select>
+  <button mat-button>Help</button>
+  <button mat-button>Privacy</button> 
+  <button mat-button>Terms</button> 
+</footer> -->
+
+  <!-- <footer class="login-footer-cnt" >
+
+  <select class="login-footer-language-option-cnt" name="language">
+    <option value="en-US">English (United States)</option>
+    <option value="tel">Telgu</option>
+    <option value="hin">Hindi</option>
+    <option value="eng">English</option>
+    <option value="guj">Gujarathi</option>
+    <option value="mar">Marati</option>
+</select>
+
+    
+
+  <button mat-flat-button>Help</button>
+        <button mat-flat-button>Privacy</button> 
+        <button mat-flat-button>Terms</button> 
+
+        
+  </footer>
+     
+    
+  
+
+
+
+
+   
+
+   -->

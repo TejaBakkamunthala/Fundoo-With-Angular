@@ -1,0 +1,33 @@
+<p>directives-demo works!</p>
+
+<!-- 1)Create a new component named directives-demo.
+Use *ngIf to conditionally display a message based on a boolean variable.
+Use *ngFor to loop through an array of strings and display each item in a list.
+2)Create a new component named event-handling-demo.
+Add a button to the component template.
+Implement a method in the component class that displays an alert when the button is clicked.
+Bind the button's click event to the method. -->
+
+
+<div *ngIf="isMessage" class="item">
+ <p>This message is visible because you gave the boolean variable as true.</p>
+  </div>
+  
+  <ul>
+    <li *ngFor="let item of itemsList" class="item">{{ item }}</li>
+  </ul>
+
+  <button  *ngIf="isSubmitted">Submit</button>
+
+
+  
+  
+
+   
+    
+
+
+
+
+
+

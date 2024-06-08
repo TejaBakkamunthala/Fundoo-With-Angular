@@ -1,0 +1,29 @@
+.icons{
+    display: flex;
+    gap:10px;
+}
+
+
+.colorIcon {
+    width: 24px; 
+    height: 24px; 
+    border: none; 
+    border-radius: 50%; 
+    margin: 4px;
+    cursor: pointer; 
+   
+  }
+
+  
+  .colorIcon:hover {
+    border: 2px solid #333; 
+    
+  }
+
+  .app-icons{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+  

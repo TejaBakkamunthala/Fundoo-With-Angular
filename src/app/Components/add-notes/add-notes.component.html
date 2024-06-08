@@ -1,0 +1,45 @@
+
+<div *ngIf="display; then takeNotes else inputNotes"></div>
+<ng-template #takeNotes>
+
+<div class="takeNotes" >
+
+    <input  type="text" placeholder="Take a note..." (click)="display=!display"  >
+
+    <button mat-icon-button  matTooltip="search" class="header-search">
+        <img class="notes-img" src="/assets/checkBox.png">
+    </button>
+  
+    <button mat-icon-button  matTooltip="search" class="header-search">
+        <img class="notes-img" src="/assets/brush.png">
+    </button>
+  
+    <button mat-icon-button  matTooltip="search" class="header-search">
+        <img class="notes-img" src="/assets/add-image.png">
+    </button>
+     </div>  
+
+     </ng-template>
+
+     <ng-template #inputNotes>
+        <form [formGroup]="NotesDataForm" (ngSubmit)="OnNote()">
+
+     <div class="createNotes">
+     <div class="title">
+         <input type="text" placeholder="Title" formControlName="title" >
+         <button mat-icon-button style="margin-left: 335px; width:50px; height: 50px;">
+             <img src="assets/pinn.png" style="width:26px; height: 26px">
+         </button>
+     </div>
+     <input type="text" placeholder="Take a note..." style="font-size: 15px;font-weight: 400;" formControlName="description" >
+     <div class="icons">
+         <app-icons></app-icons>
+         <button mat-button style="margin-left: 100px" >Close</button>
+     </div>
+ </div>
+
+ </form>
+
+ </ng-template>
+ 
+    
